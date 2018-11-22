@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Login View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="Stylizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backdroplogin" translatesAutoresizingMaskIntoConstraints="NO" id="S9x-Ua-ndn">
+                                <rect key="frame" x="-17" y="-7" width="408" height="692"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backdroplogin2" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-eY-pak">
+                                <rect key="frame" x="3" y="128" width="369" height="247"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginlines" translatesAutoresizingMaskIntoConstraints="NO" id="sWU-En-WjS">
+                                <rect key="frame" x="50" y="230" width="280" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stylizer logo" translatesAutoresizingMaskIntoConstraints="NO" id="AaJ-Gx-oMF">
+                                <rect key="frame" x="89" y="128" width="229" height="59"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-d8-OEO">
+                                <rect key="frame" x="45" y="316" width="285" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="continuebutton"/>
+                                <connections>
+                                    <action selector="continueToMain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oDM-ko-tYG"/>
+                                    <segue destination="CTd-iD-vfN" kind="presentation" identifier="goHome" id="ZcU-5W-us7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueBox" destination="8fg-eY-pak" id="OdK-hv-L3i"/>
+                        <outlet property="continueButton" destination="Zm9-d8-OEO" id="hb8-JV-gZ7"/>
+                        <outlet property="loginLines" destination="sWU-En-WjS" id="DeZ-S2-HyJ"/>
+                        <outlet property="stylogo" destination="AaJ-Gx-oMF" id="fzF-Pn-N60"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="136"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="t9j-Q9-76b">
+            <objects>
+                <viewController title="Home View Controller" id="CTd-iD-vfN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8kK-He-yiK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HbU-Id-0VT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhp-E7-QRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="151"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Stylizer logo" width="231" height="67"/>
+        <image name="backdroplogin" width="375" height="667"/>
+        <image name="backdroplogin2" width="371" height="249"/>
+        <image name="continuebutton" width="285" height="46"/>
+        <image name="loginlines" width="282" height="67"/>
+    </resources>
+</document>
