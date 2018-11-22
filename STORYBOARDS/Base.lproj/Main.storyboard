@@ -44,10 +44,6 @@
                                     <segue destination="CTd-iD-vfN" kind="presentation" identifier="goHome" id="ZcU-5W-us7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OR" translatesAutoresizingMaskIntoConstraints="NO" id="0eR-le-mx7">
-                                <rect key="frame" x="169" y="404" width="37" height="28"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brf-of-uHa">
                                 <rect key="frame" x="73" y="205" width="237" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -78,7 +74,6 @@
                         <outlet property="enterEmailText" destination="brf-of-uHa" id="uWd-y4-j9T"/>
                         <outlet property="enterPasswordText" destination="51w-zL-7Fs" id="9yR-fE-RcE"/>
                         <outlet property="loginLines" destination="sWU-En-WjS" id="DeZ-S2-HyJ"/>
-                        <outlet property="orText" destination="0eR-le-mx7" id="EQG-oH-WrU"/>
                         <outlet property="stylogo" destination="AaJ-Gx-oMF" id="fzF-Pn-N60"/>
                     </connections>
                 </viewController>
@@ -103,7 +98,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="OR" width="36" height="19"/>
         <image name="Stylizer logo" width="231" height="67"/>
         <image name="backdroplogin" width="375" height="667"/>
         <image name="backdroplogin2" width="371" height="249"/>
