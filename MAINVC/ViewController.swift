@@ -17,10 +17,20 @@ class ViewController: UIViewController {
 let context = PersistenceServce.context
     var user: [User] = []
 
+    @IBOutlet weak var loginButton : FBSDKLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
+        //self.loginButton.delegate = self
+        if (FBSDKAccessToken.current() != nil) {
+    // User is logged in, use 'accessToken' here.
+        } else {
+       // User is logged out (ERROR)
+        }
+     
+        
+        
         
         let loginButton = LoginButton(readPermissions: [ .publicProfile ])
         loginButton.frame.origin.y = 220
@@ -28,16 +38,10 @@ let context = PersistenceServce.context
         view.addSubview(loginButton)
         loginButton.isHidden = true
         
+     
         
-        guard let username = Auth.auth().currentUser?.displayName else { return }
-        guard let email = Auth.auth().currentUser?.email else { return }
-        //loggedInLabel.text = "Logged in as \(username)"
-        //usernameLabel.text = "\(username)"
-        //emailLabel.text = "\(email)"
-            
-
-    }
-    
+        
+            }
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animations()
@@ -51,6 +55,30 @@ let context = PersistenceServce.context
             storyboard.instantiateInitialViewController()
         }
         
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        print("User Logged In")
+        
+        if ((error) != nil)
+        {
+            // Process error
+        }
+        else if result.isCancelled {
+            // Handle cancellations
+        }
+        else {
+            // If you ask for multiple permissions at once, you
+            // should check if specific permissions missing
+            if result.grantedPermissions.contains("email")
+            {
+                // Do work
+            }
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("User Logged Out")
     }
 
     
@@ -70,14 +98,24 @@ let context = PersistenceServce.context
         performSegue(withIdentifier: "goHome", sender: self)
         print("Going to Home Screen!, Welcome Guest")
     }
-
+//WIP
+  //  func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, //error: NSError!) {
+     //   if ((error) != nil) {
+            // Process error
+     //   }
+     //   else if result.isCancelled {
+            // Handle cancellations
+     //   }
+      //  else {
+            // Navigate to other view
+       // }
     
     
     
     func animations() {
         //Changes the alpha of the login Screen when displayed
         //Animated the login screen
-        let loginButton = LoginButton.self
+        
         UIView.animate(withDuration: 2.5, delay: 2, options: .curveEaseIn, animations:
             {
             self.stylogo.alpha = 1
@@ -105,8 +143,9 @@ let context = PersistenceServce.context
             
         })
         UIView.animate(withDuration: 3, delay: 2, animations: {
-          ""
+       //
         })
+        
         print("Function is working?")
         
 }
