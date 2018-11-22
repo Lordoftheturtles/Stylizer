@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_d05vfbptA4yXEIV3HZwgze2j"
+        
         
         return true
     }
