@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 import FirebaseAuth
+import FBSDKLoginKit
 
 
 class ViewController: UIViewController {
@@ -20,6 +21,13 @@ let context = PersistenceServce.context
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
+        
+        guard let username = Auth.auth().currentUser?.displayName else { return }
+        guard let email = Auth.auth().currentUser?.email else { return }
+        //loggedInLabel.text = "Logged in as \(username)"
+        //usernameLabel.text = "\(username)"
+        //emailLabel.text = "\(email)"
+        
 
     }
     
@@ -27,6 +35,14 @@ let context = PersistenceServce.context
         super.viewDidAppear(animated)
         animations()
         
+        if Auth.auth().currentUser != nil {
+            let storyboard = UIStoryboard(name: "", bundle: nil)
+            let _ = storyboard.instantiateViewController(withIdentifier: "") as? UINavigationController
+            performSegue(withIdentifier: "", sender: nil)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            storyboard.instantiateInitialViewController()
+        }
         
     }
 
@@ -86,7 +102,7 @@ let context = PersistenceServce.context
   
 
     
-
+    
 
     
     @IBAction func continueToMain(_ sender: UIButton) {
@@ -154,7 +170,7 @@ let context = PersistenceServce.context
                 self.enterPasswordText.alpha = 1
         })
         
-        
+    
         print("Function is working?")
         
 }
@@ -193,7 +209,35 @@ let context = PersistenceServce.context
 //}
 
 
+
+@IBAction func loginFacebookAction(sender: AnyObject) {//action of the custom button in the storyboard
+    let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+    fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) -> Void in
+        if (error == nil){
+            let fbloginresult : FBSDKLoginManagerLoginResult = result!
+            // if user cancel the login
+            if (result?.isCancelled)!{
+                return
+            }
+            if(fbloginresult.grantedPermissions.contains("email"))
+            {
+                self.getFBUserData()
+            }
+        }
+    }
 }
+func getFBUserData(){
+    if((FBSDKAccessToken.current()) != nil){
+        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+            if (error == nil){
+                //everything works print the user data
+                print(result)
+            }
+        })
+    }
+}
+}
+
 extension UIViewController {
     func hideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -206,3 +250,5 @@ extension UIViewController {
     }
     
 }
+
+
