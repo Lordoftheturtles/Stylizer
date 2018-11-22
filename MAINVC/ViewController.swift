@@ -23,9 +23,11 @@ let context = PersistenceServce.context
         hideKeyboard()
         
         let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-        loginButton.frame.origin.y = 325
+        loginButton.frame.origin.y = 220
         loginButton.frame.origin.x = 101
         view.addSubview(loginButton)
+        loginButton.isHidden = true
+        
         
         guard let username = Auth.auth().currentUser?.displayName else { return }
         guard let email = Auth.auth().currentUser?.email else { return }
@@ -52,66 +54,36 @@ let context = PersistenceServce.context
     }
 
     
+    
 // Loginviewcontroller
 
     
     @IBOutlet weak var stylogo: UIImageView!
-    @IBOutlet weak var loginLines: UIImageView!
-    @IBOutlet weak var blueBox: UIImageView!
+        @IBOutlet weak var blueBox: UIImageView!
     @IBOutlet weak var continueButton: UIButton!
-    
-    
-    @IBOutlet weak var enterEmailText: UITextField!
-   
-    
-    @IBOutlet weak var enterPasswordText: UITextField!
-   
-    //DISMISS THE KEYBOARD
-  
-
-    
+    @IBOutlet weak var facebookBackDrop: UIImageView!
     
 
     
     @IBAction func continueToMain(_ sender: UIButton) {
         // Continues to Main Screen
         performSegue(withIdentifier: "goHome", sender: self)
-        print("Going to Home Screen!")
+        print("Going to Home Screen!, Welcome Guest")
     }
-    
-    @IBAction func emailButtonTapped(_ sender: Any) {
-        
-        
-        print("Email label began editing")
-    }
-    
-    @IBAction func passwordButtonTapped(_ sender: Any) {
-        
-        
-        print("Password Label began editing")
-    }
-    
+
     
     
     
     func animations() {
         //Changes the alpha of the login Screen when displayed
         //Animated the login screen
+        let loginButton = LoginButton.self
         UIView.animate(withDuration: 2.5, delay: 2, options: .curveEaseIn, animations:
             {
             self.stylogo.alpha = 1
         
         })
     
-        
-    UIView.animate(withDuration: 3, delay: 2.4, options: .curveEaseIn, animations:
-        {
-                
-                self.loginLines.alpha = 1
-                
-    })
-
-                
         UIView.animate(withDuration: 2, delay: 0, options: .curveEaseIn, animations:
             {
                 self.blueBox.alpha = 1
@@ -124,21 +96,22 @@ let context = PersistenceServce.context
         
         })
         
-        UIView.animate(withDuration: 3, delay: 3.1, options: .curveEaseIn, animations:
-            {
-                self.enterEmailText.alpha = 1
+        UIView.animate(withDuration: 3, delay: 2, options: .curveEaseIn, animations: {
+            self.facebookBackDrop.alpha = 1
         })
         
-        UIView.animate(withDuration: 3, delay: 3.1, options: .curveEaseIn, animations:
-            {
-                self.enterPasswordText.alpha = 1
+        UIView.animate(withDuration: 3, delay: 2, options: .curveEaseIn, animations: {
+            self.continueButton.alpha = 1
+            
         })
-        
-    
+        UIView.animate(withDuration: 3, delay: 2, animations: {
+          ""
+        })
         print("Function is working?")
         
 }
 
+  
 }
 
 extension UIViewController {

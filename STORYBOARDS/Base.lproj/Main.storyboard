@@ -26,44 +26,23 @@
                                 <rect key="frame" x="3" y="128" width="369" height="247"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginlines" translatesAutoresizingMaskIntoConstraints="NO" id="sWU-En-WjS">
-                                <rect key="frame" x="50" y="230" width="280" height="65"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stylizer logo" translatesAutoresizingMaskIntoConstraints="NO" id="AaJ-Gx-oMF">
-                                <rect key="frame" x="89" y="128" width="229" height="59"/>
+                                <rect key="frame" x="89" y="138" width="229" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-d8-OEO">
-                                <rect key="frame" x="45" y="316" width="285" height="46"/>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-d8-OEO">
+                                <rect key="frame" x="123" y="282" width="129" height="15"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <state key="normal" image="continuebutton"/>
+                                <state key="normal" image="log in as guest"/>
                                 <connections>
                                     <action selector="continueToMain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oDM-ko-tYG"/>
                                     <segue destination="CTd-iD-vfN" kind="presentation" identifier="goHome" id="ZcU-5W-us7"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brf-of-uHa">
-                                <rect key="frame" x="73" y="205" width="237" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="emailButtonTapped:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="IWM-qN-5dX"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51w-zL-7Fs">
-                                <rect key="frame" x="73" y="257" width="237" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="passwordButtonTapped:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="DZQ-Qm-Jtl"/>
-                                </connections>
-                            </textField>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="continuebuttonUpdated" translatesAutoresizingMaskIntoConstraints="NO" id="AZ3-xp-gsa">
+                                <rect key="frame" x="45" y="211" width="285" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -71,9 +50,7 @@
                     <connections>
                         <outlet property="blueBox" destination="8fg-eY-pak" id="OdK-hv-L3i"/>
                         <outlet property="continueButton" destination="Zm9-d8-OEO" id="hb8-JV-gZ7"/>
-                        <outlet property="enterEmailText" destination="brf-of-uHa" id="uWd-y4-j9T"/>
-                        <outlet property="enterPasswordText" destination="51w-zL-7Fs" id="9yR-fE-RcE"/>
-                        <outlet property="loginLines" destination="sWU-En-WjS" id="DeZ-S2-HyJ"/>
+                        <outlet property="facebookBackDrop" destination="AZ3-xp-gsa" id="WDg-M5-vvI"/>
                         <outlet property="stylogo" destination="AaJ-Gx-oMF" id="fzF-Pn-N60"/>
                     </connections>
                 </viewController>
@@ -101,7 +78,7 @@
         <image name="Stylizer logo" width="231" height="67"/>
         <image name="backdroplogin" width="375" height="667"/>
         <image name="backdroplogin2" width="371" height="249"/>
-        <image name="continuebutton" width="285" height="46"/>
-        <image name="loginlines" width="282" height="67"/>
+        <image name="continuebuttonUpdated" width="285" height="46"/>
+        <image name="log in as guest" width="128" height="9"/>
     </resources>
 </document>
