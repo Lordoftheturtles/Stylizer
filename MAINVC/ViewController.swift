@@ -14,7 +14,7 @@ import FBSDKLoginKit
 import FacebookLogin
 
 class ViewController: UIViewController {
-let context = PersistenceServce.context
+
     var user: [User] = []
 
     @IBOutlet weak var loginButton : FBSDKLoginButton!
