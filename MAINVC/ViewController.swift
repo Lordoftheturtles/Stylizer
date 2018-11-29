@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Stylizer
+//  StylizerhomeVIewController
 //
 //  Created by Brad Seymour on 22/11/18.
 //  Copyright © 2018 StylizerTeam. All rights reserved.
@@ -147,10 +147,10 @@ class ViewController: UIViewController {
         })
         
         print("Function is working?")
-        
 }
-
   
+    
+    
 }
 
 extension UIViewController {

@@ -61,7 +61,7 @@
         <!--Home View Controller-->
         <scene sceneID="t9j-Q9-76b">
             <objects>
-                <viewController title="Home View Controller" id="CTd-iD-vfN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeView" title="Home View Controller" id="CTd-iD-vfN" customClass="homeViewController" customModule="Stylizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8kK-He-yiK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhp-E7-QRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="151"/>
+            <point key="canvasLocation" x="1168.8" y="150.67466266866569"/>
         </scene>
     </scenes>
     <resources>
