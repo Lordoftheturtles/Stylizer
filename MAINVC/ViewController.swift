@@ -20,18 +20,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var stylizerLogo: UIImageView!
     @IBOutlet weak var loginDetailsBox: UIImageView!
     @IBOutlet weak var loginIcons: UIImageView!
-    @IBOutlet weak var forgotPasswordButton: UIButton! // 2
-    @IBOutlet weak var loginButton: UIButton! // 3
-    @IBOutlet weak var registerButton: UIButton! //3
+    @IBOutlet weak var forgotPasswordButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     
     
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
+    //MARK: Button Actions
+    
+    @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
+        print("Forgot Password Button Tapped!")
+    }
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        print("Login Button Tapped!")
+    }
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        print("Register Button Tapped!")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        dismissKeyboard()
+        hideKeyboard()
         animateLoginScreen()
     }
      
@@ -41,34 +55,34 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
+        hideKeyboard()
+
         }
     
     func animateLoginScreen() {
         
-        UIView.animate(withDuration: 2, delay: 0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseIn, animations: {
             self.stylizerLogo.alpha = 1
         })
-        UIView.animate(withDuration: 2, delay: 1.5, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1.2, delay: 1.5, options: .curveEaseIn, animations: {
             self.loginDetailsBox.alpha = 1
         })
-        UIView.animate(withDuration: 2, delay: 1.5, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1.2, delay: 1.5, options: .curveEaseIn, animations: {
             self.emailAddressTextField.alpha = 1
         })
-        UIView.animate(withDuration: 2, delay: 1.5, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1.2, delay: 1.5, options: .curveEaseIn, animations: {
             self.passwordTextField.alpha = 1
         })
-        UIView.animate(withDuration: 2, delay: 2.5, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1.2, delay: 2.5, options: .curveEaseIn, animations: {
             self.loginIcons.alpha = 1
         })
-        UIView.animate(withDuration: 2, delay: 3, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1.2, delay: 3, options: .curveEaseIn, animations: {
             self.forgotPasswordButton.alpha = 1
         })
-        UIView.animate(withDuration: 2, delay: 3.5, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1.2, delay: 3.5, options: .curveEaseIn, animations: {
             self.loginButton.alpha = 1
         })
-        UIView.animate(withDuration: 2, delay: 3.5, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1.2, delay: 3.5, options: .curveEaseIn, animations: {
             self.registerButton.alpha = 1
         })
         print("Login Screen is animating!")
@@ -78,6 +92,7 @@ class ViewController: UIViewController {
 }
 
 extension UIViewController {
+    
     func hideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
