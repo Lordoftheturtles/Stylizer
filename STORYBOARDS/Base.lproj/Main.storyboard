@@ -40,6 +40,7 @@
                                 <state key="normal" image="forgotPWText"/>
                                 <connections>
                                     <action selector="forgotPasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0M-Kc-0IP"/>
+                                    <segue destination="B6j-am-eD0" kind="presentation" identifier="forgotPWSegue" id="1iN-p1-c1R"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCT-kG-nsA">
@@ -56,6 +57,7 @@
                                 <state key="normal" image="Register Button"/>
                                 <connections>
                                     <action selector="registerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7H-ZJ-WAi"/>
+                                    <segue destination="Lvz-TF-yRM" kind="presentation" identifier="registerSegue" id="uFX-A6-Ipu"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-AY-hCn">
@@ -91,11 +93,151 @@
             </objects>
             <point key="canvasLocation" x="237.59999999999999" y="135.38230884557723"/>
         </scene>
+        <!--Register View Controller-->
+        <scene sceneID="3sT-fA-dcz">
+            <objects>
+                <viewController storyboardIdentifier="registerVC" title="Register View Controller" id="Lvz-TF-yRM" customClass="registerViewController" customModule="Stylizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lU5-59-t04">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginScreenBD" translatesAutoresizingMaskIntoConstraints="NO" id="cYd-aA-HRP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stylizer logo" translatesAutoresizingMaskIntoConstraints="NO" id="7ax-aP-jbp">
+                                <rect key="frame" x="80" y="106" width="220" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginDetailsBox" translatesAutoresizingMaskIntoConstraints="NO" id="Nu8-6w-C7Z">
+                                <rect key="frame" x="43" y="221" width="289" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginICONS" translatesAutoresizingMaskIntoConstraints="NO" id="RdR-U2-8F7">
+                                <rect key="frame" x="54" y="231" width="20" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEE-zv-UWE">
+                                <rect key="frame" x="43" y="325" width="289" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="Register Button"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="Lvz-TF-yRM" eventType="touchUpInside" id="xxb-LJ-UOC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r9p-nA-zm1">
+                                <rect key="frame" x="82" y="231" width="235" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMk-je-vh1">
+                                <rect key="frame" x="82" y="269" width="235" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acw-2Y-qQd">
+                                <rect key="frame" x="43" y="390" width="289" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="backToLoginScreen"/>
+                                <connections>
+                                    <action selector="returnToLoginButtonTapped:" destination="Lvz-TF-yRM" eventType="touchUpInside" id="vif-DZ-z3H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dLF-Ti-0CM"/>
+                    </view>
+                    <connections>
+                        <outlet property="backToLoginButton" destination="acw-2Y-qQd" id="8BF-YQ-OdA"/>
+                        <outlet property="emailAddressTextField" destination="r9p-nA-zm1" id="xVl-2M-8Dw"/>
+                        <outlet property="loginDetailsBox" destination="Nu8-6w-C7Z" id="AWg-fy-Sls"/>
+                        <outlet property="loginIcons" destination="RdR-U2-8F7" id="AI8-hB-90E"/>
+                        <outlet property="passwordTextField" destination="AMk-je-vh1" id="KCa-uE-E2B"/>
+                        <outlet property="registerButton" destination="QEE-zv-UWE" id="xc0-WA-GkA"/>
+                        <outlet property="stylizerLogo" destination="7ax-aP-jbp" id="xzL-id-4cw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgk-2z-10J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159" y="135"/>
+        </scene>
+        <!--Recover Password-->
+        <scene sceneID="aZ8-5M-7En">
+            <objects>
+                <viewController title="Recover Password" id="B6j-am-eD0" customClass="recoverPasswordVC" customModule="Stylizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dcW-AC-kkf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginScreenBD" translatesAutoresizingMaskIntoConstraints="NO" id="0hr-VI-2Ma">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stylizer logo" translatesAutoresizingMaskIntoConstraints="NO" id="aoa-T4-lQL">
+                                <rect key="frame" x="80" y="106" width="220" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmailBox" translatesAutoresizingMaskIntoConstraints="NO" id="vZh-BY-pHe">
+                                <rect key="frame" x="43" y="219" width="289" height="47"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emailICON" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-F4-qC6">
+                                <rect key="frame" x="54" y="231" width="20" height="21"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uda-fk-8hQ">
+                                <rect key="frame" x="43" y="301" width="289" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="RecoverPasswordButton"/>
+                                <connections>
+                                    <action selector="recoverPasswordButtonTapped:" destination="B6j-am-eD0" eventType="touchUpInside" id="fCo-0e-yj4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-Tf-neD">
+                                <rect key="frame" x="43" y="360" width="289" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="backToLoginScreen"/>
+                                <connections>
+                                    <action selector="backToLoginButtonTapped:" destination="B6j-am-eD0" eventType="touchUpInside" id="M7e-Bu-XWk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bHi-H8-Dnd">
+                                <rect key="frame" x="84" y="229" width="232" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="j2R-UF-djL"/>
+                    </view>
+                    <connections>
+                        <outlet property="backToLoginButton" destination="f2h-Tf-neD" id="tHu-dH-bjL"/>
+                        <outlet property="emailAddressTextField" destination="bHi-H8-Dnd" id="nEd-sE-Poc"/>
+                        <outlet property="emailBox" destination="vZh-BY-pHe" id="Udc-Jg-7ho"/>
+                        <outlet property="emailIcon" destination="B4I-F4-qC6" id="Msz-G4-KWc"/>
+                        <outlet property="recoverPasswordButton" destination="uda-fk-8hQ" id="XkB-ay-E2m"/>
+                        <outlet property="stylizerLogo" destination="aoa-T4-lQL" id="pDW-DE-aOd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBY-bQ-2hU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="823.53823088455783"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="EmailBox" width="289" height="47"/>
         <image name="LoginButton" width="289" height="34"/>
+        <image name="RecoverPasswordButton" width="289" height="34"/>
         <image name="Register Button" width="289" height="34"/>
         <image name="Stylizer logo" width="220" height="64"/>
+        <image name="backToLoginScreen" width="289" height="34"/>
+        <image name="emailICON" width="24" height="23"/>
         <image name="forgotPWText" width="108" height="9"/>
         <image name="loginDetailsBox" width="289" height="81"/>
         <image name="loginICONS" width="24" height="63"/>
