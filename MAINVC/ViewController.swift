@@ -40,8 +40,33 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "forgotPWSegue", sender: self)
     }
     @IBAction func loginButtonTapped(_ sender: Any) {
-        print("Login Button Tapped!")
-    }
+        guard let email = emailAddressTextField.text,
+            email != "",
+            let password = passwordTextField.text,
+            password != ""
+            else {
+                AlertController.showCustomAlert(self, title: "Missing information", message: "Please fill out the required fields!")
+                return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+            guard error == nil else {
+                AlertController.showCustomAlert(self, title: "Error", message: error!.localizedDescription)
+                return
+            }
+            guard let user = user else { return }
+            print(user.user.email ?? "Missing Email")
+            print(user.user.displayName ?? "Missing Display Name")
+            print(user.user.uid)
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let _ = storyboard.instantiateViewController(withIdentifier: "") as? UINavigationController
+//            self.performSegue(withIdentifier: "", sender: nil)
+        
+            print("Login Button Tapped!")
+        }
+    )}
+    
+    
     @IBAction func registerButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "registerSegue", sender: self)
         print("Register Button Tapped!")
