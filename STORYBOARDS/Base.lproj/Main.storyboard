@@ -49,7 +49,6 @@
                                 <state key="normal" image="LoginButton"/>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOS-BS-WSD"/>
-                                    <segue destination="sOn-Jn-T7Z" kind="presentation" identifier="logInSegue" id="ooq-OA-Vzt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ax-i7-Njw">

@@ -16,9 +16,9 @@ import FacebookLogin
 import Stripe
 
 
-class ViewController: UIViewController {
 
-    var user: [User] = []
+class ViewController: UIViewController {
+    
 
     @IBOutlet weak var stylizerLogo: UIImageView!
     @IBOutlet weak var loginDetailsBox: UIImageView!
@@ -35,37 +35,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
-        
-        
+        getCurrentUser()
     }
-    
-    
-    
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         hideKeyboard()
         animateLoginScreen()
-    
-    }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        // Is the User Logged in?
-        if Auth.auth().currentUser != nil {
-            let storyboard = UIStoryboard(name: "Menu", bundle: nil)
-            let _ = storyboard.instantiateViewController(withIdentifier: "menuViewController") as? UINavigationController
-            performSegue(withIdentifier: "logInSegue", sender: nil)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            storyboard.instantiateInitialViewController()
-        }
+        getCurrentUser()
         
     }
     
-    
+
     //MARK: Button Actions
     
     @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
@@ -73,37 +55,33 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "forgotPWSegue", sender: self)
     }
     @IBAction func loginButtonTapped(_ sender: Any) {
-    
-        
-
-    guard let email = emailAddressTextField.text, email != "",
-    let password = passwordTextField.text, password != ""
-        else {
-            AlertController.showCustomAlert(self, title: "Missing information", message: "Please fill out the required fields!")
+// Handles Login
+        guard let email = emailAddressTextField.text,
+        email != "",
+        let password = passwordTextField.text,
+        password != ""
+            else {
+                AlertController.showCustomAlert(self, title: "Missing Information", message: "Please fill out the required fields!")
+                return
+        }
+        Auth.auth().signIn(withEmail: emailAddressTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if user != nil {
+                // User is logged in
             
-            return
+                print("You have successfully been logged in!")
+                self.getCurrentUser()
+            }
+            if error != nil {
+                AlertController.showCustomAlert(self, title: "Incorrect Information", message: "Please enter the correct information or register your account!")
+            }
         }
-        
-        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-            guard error == nil else {
-                AlertController.showCustomAlert(self, title: "Error", message: error!.localizedDescription)
-        return
     }
-            guard let user = user else { return }
-             print(user.user.email ?? "Missing Email")
-             print(user.user.uid)
-            let storyboard = UIStoryboard(name: "Menu", bundle: nil)
-            let _ = storyboard.instantiateViewController(withIdentifier: "menuVC") as? UINavigationController
-            self.performSegue(withIdentifier: "logInSegue", sender: self)
-        }
-    )}
-    
-    
     
     @IBAction func registerButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "registerSegue", sender: self)
         print("Register Button Tapped!")
     }
+    
     
     
     
@@ -138,7 +116,15 @@ class ViewController: UIViewController {
         
     }
     
-   
+    
+    func getCurrentUser() {
+        if Auth.auth().currentUser != nil {
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Menu", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "menuVC") as! menuViewController
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
     
 }
 

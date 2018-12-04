@@ -11,8 +11,7 @@ import UIKit
 import CoreData
 import Firebase
 import Stripe
-import FBSDKLoginKit
-import FacebookLogin
+import FirebaseAuth
 
 class registerViewController: UIViewController {
 
@@ -43,9 +42,25 @@ class registerViewController: UIViewController {
     
     
     @IBAction func registerButtonTapped(_ sender: Any) {
-        handleSignUp()
+        guard let username = emailAddressTextField.text,
+        username != "",
+        let email = emailAddressTextField.text,
+        email != "",
+        let password = passwordTextField.text,
+        password != ""
+            else {
+                AlertController.showCustomAlert(self, title: "Missing Information", message: "Please fill out all the required fields!")
+                return
+        }
+        Auth.auth().createUser(withEmail: emailAddressTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if user != nil {
+                print("User has been created and logged in!")
+            }
+            if error == nil {
+                AlertController.showCustomAlert(self, title: "Something Went Wrong!", message: ":("
+            )}
+        }
     }
-        
 
         
     
@@ -82,18 +97,5 @@ class registerViewController: UIViewController {
         
     }
     
-    @objc func handleSignUp() {
-        guard let email = emailAddressTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            if error == nil && user != nil {
-                print("User Created")
-                // Show Message confirming user has been created!
-            } else {
-                print("Error, Could not Create User")
-            }
-        }
-    
-    
-}
+  
 }
