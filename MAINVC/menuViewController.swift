@@ -41,22 +41,28 @@ class menuViewController: UIViewController {
     //MARK: Actions
     
     @IBAction func menuButtonTapped(_ sender: Any) {
+        print("Menu Button Tapped, Display Side Bar")
     }
     
     @IBAction func accountButtonTapped(_ sender: Any) {
+        print("Account Button Tapped, Display Information about account")
     }
     
     @IBAction func productsButtonTapped(_ sender: Any) {
+        print("Product Button Tapped, link to Products page or display products")
         
     }
     @IBAction func subscriptionButtonTapped(_ sender: Any) {
+        print("Show Subscriptions in a tab")
         
     }
     
     @IBAction func contactUsButtonTapped(_ sender: Any) {
+        print("Go to Contact Us page")
         
     }
     @IBAction func becomeAffiliateButtonTapped(_ sender: Any) {
+        print("Go to Affiliate Webpage / LINK")
         
     }
     
