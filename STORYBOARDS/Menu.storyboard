@@ -82,6 +82,14 @@
                                     <action selector="becomeAffiliateButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="l03-Mk-05c"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auG-Ox-VO1">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="logOutButton"/>
+                                <connections>
+                                    <action selector="logOutButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="E4I-VS-C4w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dC4-H1-Piz"/>
@@ -91,6 +99,7 @@
                         <outlet property="becomeAffiliateButton" destination="adf-Qw-H2d" id="9zc-7c-Bek"/>
                         <outlet property="contactUsButton" destination="h3T-rq-6Yu" id="Gsj-YW-o1z"/>
                         <outlet property="greyBD" destination="Xav-Ae-Bo0" id="3ZH-aO-8E3"/>
+                        <outlet property="logOutButton" destination="auG-Ox-VO1" id="4Jg-AC-JmC"/>
                         <outlet property="menuButton" destination="ko1-xD-Tpt" id="Q3Z-rA-eaY"/>
                         <outlet property="productsButton" destination="rkW-mY-5Pa" id="YZt-eH-zQf"/>
                         <outlet property="stylizerLogo" destination="cKw-aQ-2aw" id="RGW-mQ-t2h"/>
@@ -110,6 +119,7 @@
         <image name="backdroplogin" width="375" height="667"/>
         <image name="contactUsButton" width="286" height="109"/>
         <image name="greyedOutBD" width="375" height="600"/>
+        <image name="logOutButton" width="375" height="49"/>
         <image name="productsButton" width="286" height="109"/>
         <image name="profileButtonBLACK" width="40" height="36"/>
         <image name="subscriptionButton" width="286" height="109"/>

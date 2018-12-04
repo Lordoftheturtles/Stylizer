@@ -26,7 +26,9 @@ class menuViewController: UIViewController {
         super.viewDidAppear(animated)
         menuAnimations()
         
-    }
+        }
+        
+    
     
     //MARK: MENU OUTLETS
     @IBOutlet weak var greyBD: UIImageView!
@@ -38,7 +40,7 @@ class menuViewController: UIViewController {
     @IBOutlet weak var subscriptionButton: UIButton!
     @IBOutlet weak var contactUsButton: UIButton!
     @IBOutlet weak var becomeAffiliateButton: UIButton!
-    
+    @IBOutlet weak var logOutButton: UIButton!
     
     func menuAnimations() {
         
@@ -68,6 +70,9 @@ class menuViewController: UIViewController {
         })
         UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
             self.becomeAffiliateButton.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
+            self.logOutButton.alpha = 1
         })
         print("Menu is animating!")
     }
@@ -100,4 +105,9 @@ class menuViewController: UIViewController {
         
     }
     
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)
+        
+    }
 }

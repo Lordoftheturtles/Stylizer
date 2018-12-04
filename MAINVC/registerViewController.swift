@@ -43,40 +43,7 @@ class registerViewController: UIViewController {
     
     
     @IBAction func registerButtonTapped(_ sender: Any) {
-        
-        print("Attempting to register user!")
-        // Performs function of the register button being tapped
-        
-            guard let email = emailAddressTextField.text,
-            email != "",
-            let password = passwordTextField.text,
-            password != ""
-            else {
-                AlertController.showCustomAlert(self, title: "Missing Information", message: "Please fill in the required fields")
-                return
-                
-        }
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-            
-            guard error == nil else {
-                AlertController.showCustomAlert(self, title: "Error", message: error!.localizedDescription)
-                return
-            }
-            guard let user = user else { return }
-            print(user.user.email ?? "Mising Email")
-            print(user.user.uid)
-            let changeRequest = user.user.createProfileChangeRequest()
-            changeRequest.commitChanges(completion: { (error) in
-                guard error == nil else {
-                    AlertController.showCustomAlert(self, title: "Error", message: error!.localizedDescription)
-                    return
-                }
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let _ = storyboard.instantiateViewController(withIdentifier: "") as? UINavigationController
-//                self.performSegue(withIdentifier: "", sender: nil)
-            }
-            )  })
-        
+        handleSignUp()
     }
         
 
@@ -115,6 +82,18 @@ class registerViewController: UIViewController {
         
     }
     
+    @objc func handleSignUp() {
+        guard let email = emailAddressTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if error == nil && user != nil {
+                print("User Created")
+                // Show Message confirming user has been created!
+            } else {
+                print("Error, Could not Create User")
+            }
+        }
     
     
+}
 }

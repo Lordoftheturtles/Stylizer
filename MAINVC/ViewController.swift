@@ -32,6 +32,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hideKeyboard()
+        
+        
+    }
+    
+    
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        hideKeyboard()
+        animateLoginScreen()
+    
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        // Is the User Logged in?
+        if Auth.auth().currentUser != nil {
+            let storyboard = UIStoryboard(name: "Menu", bundle: nil)
+            let _ = storyboard.instantiateViewController(withIdentifier: "menuViewController") as? UINavigationController
+            performSegue(withIdentifier: "logInSegue", sender: nil)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            storyboard.instantiateInitialViewController()
+        }
+        
+    }
+    
     
     //MARK: Button Actions
     
@@ -40,31 +73,31 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "forgotPWSegue", sender: self)
     }
     @IBAction func loginButtonTapped(_ sender: Any) {
-        guard let email = emailAddressTextField.text,
-            email != "",
-            let password = passwordTextField.text,
-            password != ""
-            else {
-                AlertController.showCustomAlert(self, title: "Missing information", message: "Please fill out the required fields!")
-                return
+    
+        
+
+    guard let email = emailAddressTextField.text, email != "",
+    let password = passwordTextField.text, password != ""
+        else {
+            AlertController.showCustomAlert(self, title: "Missing information", message: "Please fill out the required fields!")
+            
+            return
         }
         
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             guard error == nil else {
                 AlertController.showCustomAlert(self, title: "Error", message: error!.localizedDescription)
-                return
-            }
-            
+        return
+    }
             guard let user = user else { return }
-            print(user.user.email ?? "Missing Email")
-            print(user.user.displayName ?? "Missing Display Name")
-            print(user.user.uid)
-            let _ = UIStoryboard(name: "Menu", bundle: nil)
-            self.performSegue(withIdentifier: "logInSegue", sender: nil)
-           
-            print("Login Button Tapped!")
+             print(user.user.email ?? "Missing Email")
+             print(user.user.uid)
+            let storyboard = UIStoryboard(name: "Menu", bundle: nil)
+            let _ = storyboard.instantiateViewController(withIdentifier: "menuVC") as? UINavigationController
+            self.performSegue(withIdentifier: "logInSegue", sender: self)
         }
     )}
+    
     
     
     @IBAction func registerButtonTapped(_ sender: Any) {
@@ -73,22 +106,7 @@ class ViewController: UIViewController {
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hideKeyboard()
-        
-    }
-     
-        
-  
-        
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        hideKeyboard()
-        animateLoginScreen()
-
-        }
     
     func animateLoginScreen() {
         
@@ -119,6 +137,8 @@ class ViewController: UIViewController {
         print("Login Screen is animating!")
         
     }
+    
+   
     
 }
 
