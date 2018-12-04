@@ -59,9 +59,8 @@ class ViewController: UIViewController {
             print(user.user.email ?? "Missing Email")
             print(user.user.displayName ?? "Missing Display Name")
             print(user.user.uid)
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let _ = storyboard.instantiateViewController(withIdentifier: "") as? UINavigationController
-//            self.performSegue(withIdentifier: "", sender: nil)
+            let _ = UIStoryboard(name: "Menu", bundle: nil)
+            self.performSegue(withIdentifier: "logInSegue", sender: nil)
            
             print("Login Button Tapped!")
         }

@@ -24,6 +24,7 @@ class menuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        menuAnimations()
         
     }
     
@@ -37,6 +38,39 @@ class menuViewController: UIViewController {
     @IBOutlet weak var subscriptionButton: UIButton!
     @IBOutlet weak var contactUsButton: UIButton!
     @IBOutlet weak var becomeAffiliateButton: UIButton!
+    
+    
+    func menuAnimations() {
+        
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.greyBD.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.topBarMenu.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.stylizerLogo.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseIn, animations: {
+            self.menuButton.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseIn, animations: {
+            self.accountButton.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 1, options: .curveEaseIn, animations: {
+            self.productsButton.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 1.4, options: .curveEaseIn, animations: {
+            self.subscriptionButton.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 1.6, options: .curveEaseIn, animations: {
+            self.contactUsButton.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
+            self.becomeAffiliateButton.alpha = 1
+        })
+        print("Menu is animating!")
+    }
     
     //MARK: Actions
     

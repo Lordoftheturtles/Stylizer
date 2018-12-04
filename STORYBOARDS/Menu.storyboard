@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu View Controller-->
+        <!--MenuVC-->
         <scene sceneID="kGr-FV-Dct">
             <objects>
-                <viewController storyboardIdentifier="menuVC" title="Menu View Controller" id="Bgd-1T-0zB" customClass="menuViewController" customModule="Stylizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menuVC" title="MenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bgd-1T-0zB" customClass="menuViewController" customModule="Stylizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Be1-1P-oOs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,19 +22,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greyedOutBD" translatesAutoresizingMaskIntoConstraints="NO" id="Xav-Ae-Bo0">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greyedOutBD" translatesAutoresizingMaskIntoConstraints="NO" id="Xav-Ae-Bo0">
                                 <rect key="frame" x="-4" y="67" width="388" height="610"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topBarMenu" translatesAutoresizingMaskIntoConstraints="NO" id="faG-8v-ryd">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topBarMenu" translatesAutoresizingMaskIntoConstraints="NO" id="faG-8v-ryd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stylizer logo" translatesAutoresizingMaskIntoConstraints="NO" id="cKw-aQ-2aw">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stylizer logo" translatesAutoresizingMaskIntoConstraints="NO" id="cKw-aQ-2aw">
                                 <rect key="frame" x="109" y="25" width="152" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ko1-xD-Tpt">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ko1-xD-Tpt">
                                 <rect key="frame" x="16" y="31" width="35" height="34"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" image="MenuButtonBLACK"/>
@@ -42,7 +42,7 @@
                                     <action selector="menuButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="QHZ-zv-Dqo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpF-Zg-yga">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpF-Zg-yga">
                                 <rect key="frame" x="326" y="28" width="42" height="36"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" image="profileButtonBLACK"/>
@@ -50,7 +50,7 @@
                                     <action selector="accountButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="Ab8-ol-j2j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkW-mY-5Pa">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkW-mY-5Pa">
                                 <rect key="frame" x="45" y="120" width="286" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" image="productsButton"/>
@@ -58,7 +58,7 @@
                                     <action selector="productsButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="ZLM-Gw-CCd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GK-ka-kma">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GK-ka-kma">
                                 <rect key="frame" x="45" y="259" width="286" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" image="subscriptionButton"/>
@@ -66,7 +66,7 @@
                                     <action selector="subscriptionButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="VMu-Rf-scf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3T-rq-6Yu">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3T-rq-6Yu">
                                 <rect key="frame" x="45" y="398" width="286" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" image="contactUsButton"/>
@@ -74,7 +74,7 @@
                                     <action selector="contactUsButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="gWc-mT-yXU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adf-Qw-H2d">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adf-Qw-H2d">
                                 <rect key="frame" x="46" y="552" width="285" height="49"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" image="Affiliate Button"/>

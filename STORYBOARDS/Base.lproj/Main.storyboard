@@ -49,6 +49,7 @@
                                 <state key="normal" image="LoginButton"/>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOS-BS-WSD"/>
+                                    <segue destination="sOn-Jn-T7Z" kind="presentation" identifier="logInSegue" id="ooq-OA-Vzt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ax-i7-Njw">
@@ -233,6 +234,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBY-bQ-2hU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="271" y="907"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="U0D-Dt-3PB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" id="sOn-Jn-T7Z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Cr-WP-a6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="520"/>
         </scene>
     </scenes>
     <resources>
