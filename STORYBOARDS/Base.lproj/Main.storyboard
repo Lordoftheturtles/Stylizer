@@ -212,6 +212,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recoveryMessage" translatesAutoresizingMaskIntoConstraints="NO" id="5oV-Rt-Nb7">
+                                <rect key="frame" x="43" y="440" width="314" height="73"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j2R-UF-djL"/>
@@ -222,6 +226,7 @@
                         <outlet property="emailBox" destination="vZh-BY-pHe" id="Udc-Jg-7ho"/>
                         <outlet property="emailIcon" destination="B4I-F4-qC6" id="Msz-G4-KWc"/>
                         <outlet property="recoverPasswordButton" destination="uda-fk-8hQ" id="XkB-ay-E2m"/>
+                        <outlet property="recoveryMessage" destination="5oV-Rt-Nb7" id="OlS-23-kEU"/>
                         <outlet property="stylizerLogo" destination="aoa-T4-lQL" id="pDW-DE-aOd"/>
                     </connections>
                 </viewController>
@@ -242,5 +247,6 @@
         <image name="loginDetailsBox" width="289" height="81"/>
         <image name="loginICONS" width="24" height="63"/>
         <image name="loginScreenBD" width="375" height="667"/>
+        <image name="recoveryMessage" width="373" height="82"/>
     </resources>
 </document>

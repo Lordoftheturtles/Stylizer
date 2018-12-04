@@ -54,6 +54,7 @@ class ViewController: UIViewController {
                 AlertController.showCustomAlert(self, title: "Error", message: error!.localizedDescription)
                 return
             }
+            
             guard let user = user else { return }
             print(user.user.email ?? "Missing Email")
             print(user.user.displayName ?? "Missing Display Name")
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
 //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //            let _ = storyboard.instantiateViewController(withIdentifier: "") as? UINavigationController
 //            self.performSegue(withIdentifier: "", sender: nil)
-        
+           
             print("Login Button Tapped!")
         }
     )}

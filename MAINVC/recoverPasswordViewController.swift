@@ -35,10 +35,20 @@ class recoverPasswordVC: UIViewController {
     @IBOutlet weak var recoverPasswordButton: UIButton!
     @IBOutlet weak var backToLoginButton: UIButton!
     @IBOutlet weak var emailAddressTextField: UITextField!
+    @IBOutlet weak var recoveryMessage: UIImageView!
     
     
     @IBAction func recoverPasswordButtonTapped(_ sender: Any) {
-        //actions
+        // What happens after Recover button has been tapped
+        guard let email = emailAddressTextField.text,
+            email != ""
+            else {
+                AlertController.showCustomAlert(self, title: "Missing Information", message: "Please fill out the required fields")
+                return
+        }
+        Auth.auth().sendPasswordReset(withEmail: email, completion: nil)
+        // Sends the password reset form
+        recoveryMessageAnimation()
     }
     
     @IBAction func backToLoginButtonTapped(_ sender: Any) {
@@ -48,8 +58,16 @@ class recoverPasswordVC: UIViewController {
     
     
     
-    
-    
+    func recoveryMessageAnimation() {
+        
+        UIView.animate(withDuration: 3, delay: 0, options: .curveEaseIn, animations: {
+            self.recoveryMessage.alpha = 1
+        })
+        
+            UIView.animate(withDuration: 3, delay: 5, options: .curveEaseOut, animations: {
+                self.recoveryMessage.alpha = 0
+            })
+    }
     
     
     func recoverPasswordAnimations() {
