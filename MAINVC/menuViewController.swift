@@ -134,8 +134,7 @@ class menuViewController: UIViewController {
     @IBOutlet weak var privacyPolicyButton: UIButton! // 1.6
     @IBOutlet weak var menuSliderView: UIView!
     @IBOutlet weak var invisibleBackButton: UIButton!
-    
-    
+   
     @IBAction func returnSlider(_ sender: Any) {
         print("Return slider button Tapped!")
         // Returns the slider
