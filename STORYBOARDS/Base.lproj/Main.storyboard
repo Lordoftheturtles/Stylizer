@@ -87,6 +87,7 @@
                         <outlet property="passwordTextField" destination="bnp-rO-6b8" id="IUN-RM-sze"/>
                         <outlet property="registerButton" destination="9Ax-i7-Njw" id="R5v-oo-428"/>
                         <outlet property="stylizerLogo" destination="BgB-M4-gl4" id="leD-Sm-6tk"/>
+                        <segue destination="sOn-Jn-T7Z" kind="presentation" identifier="logInSegue" id="Z6F-Ye-mgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

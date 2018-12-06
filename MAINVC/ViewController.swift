@@ -19,7 +19,32 @@ import Stripe
 
 class ViewController: UIViewController {
     
+    let context = PersistenceServce.context
+    var user: [User] = []
 
+ 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hideKeyboard()
+    
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        isUserLoggedIn()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        hideKeyboard()
+        animateLoginScreen()
+        
+
+        
+
+    }
+  
     @IBOutlet weak var stylizerLogo: UIImageView!
     @IBOutlet weak var loginDetailsBox: UIImageView!
     @IBOutlet weak var loginIcons: UIImageView!
@@ -31,22 +56,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hideKeyboard()
-        getCurrentUser()
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        hideKeyboard()
-        animateLoginScreen()
-        getCurrentUser()
-        
-    }
-    
 
     //MARK: Button Actions
     
@@ -67,10 +76,12 @@ class ViewController: UIViewController {
         Auth.auth().signIn(withEmail: emailAddressTextField.text!, password: passwordTextField.text!) { (user, error) in
             if user != nil {
                 // User is logged in
-            
+                guard let user = user else { return }
+                print(user.user.email ?? "Missing Email")
+                print(user.user.uid)
                 print("You have successfully been logged in!")
-                self.getCurrentUser()
-            }
+                self.performSegue(withIdentifier: "logInSegue", sender: self)
+                            }
             if error != nil {
                 AlertController.showCustomAlert(self, title: "Incorrect Information", message: "Please enter the correct information or register your account!")
             }
@@ -116,15 +127,20 @@ class ViewController: UIViewController {
         
     }
     
-    
-    func getCurrentUser() {
+    func isUserLoggedIn() {
+        
         if Auth.auth().currentUser != nil {
-            
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Menu", bundle: nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "menuVC") as! menuViewController
-            self.present(vc, animated: true, completion: nil)
+            print("Logged in, sending to Menu")
+            self.performSegue(withIdentifier: "logInSegue", sender: self)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            storyboard.instantiateInitialViewController()
+            print("User has not been saved")
         }
+        
     }
+    
+
     
 }
 
