@@ -90,21 +90,111 @@
                                     <action selector="logOutButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="E4I-VS-C4w"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A8e-8Y-aKu">
+                                <rect key="frame" x="-280" y="0.0" width="276" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuSlider" translatesAutoresizingMaskIntoConstraints="NO" id="exe-eI-YEK">
+                                <rect key="frame" x="-280" y="0.0" width="276" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stylizer logo" translatesAutoresizingMaskIntoConstraints="NO" id="XSI-gU-Ta8">
+                                <rect key="frame" x="-272" y="15" width="220" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fC-Bb-nij">
+                                <rect key="frame" x="-272" y="88" width="243" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="instagramButtonLink"/>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88C-Ln-k1n">
+                                <rect key="frame" x="-272" y="137" width="232" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="facebookButtonLink"/>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-Rm-ybe">
+                                <rect key="frame" x="-272" y="178" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="visitWebsite"/>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqM-Nc-RSD">
+                                <rect key="frame" x="-272" y="211" width="272" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="featuredButtonSlider"/>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptr-DU-xb7">
+                                <rect key="frame" x="-272" y="264" width="272" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="NewsButton"/>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN5-TF-Eef">
+                                <rect key="frame" x="-272" y="317" width="272" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="productsButtonSlider"/>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOB-P9-wvF">
+                                <rect key="frame" x="-272" y="370" width="272" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="apparelButton"/>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9b-Fs-t7A">
+                                <rect key="frame" x="-272" y="423" width="272" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="affiliateProgramButton"/>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwC-aw-URV">
+                                <rect key="frame" x="-272" y="530" width="272" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="AboutUsButton"/>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAh-ZH-5sM">
+                                <rect key="frame" x="-272" y="583" width="272" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="privacyButton"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="breakerSlider" translatesAutoresizingMaskIntoConstraints="NO" id="ztj-G5-uBA">
+                                <rect key="frame" x="-272" y="484" width="272" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYg-my-Mm4">
+                                <rect key="frame" x="375" y="0.0" width="101" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29200594190000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="returnSlider:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="5Er-ee-xpK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dC4-H1-Piz"/>
                     </view>
                     <connections>
+                        <outlet property="aboutUsSliderButton" destination="jwC-aw-URV" id="v1h-1t-KQw"/>
                         <outlet property="accountButton" destination="UpF-Zg-yga" id="JmI-UC-wC7"/>
+                        <outlet property="affiliateProgramSliderButton" destination="c9b-Fs-t7A" id="Mfx-nh-PQx"/>
+                        <outlet property="apparelButton" destination="OOB-P9-wvF" id="Bfr-iK-YGM"/>
                         <outlet property="becomeAffiliateButton" destination="adf-Qw-H2d" id="9zc-7c-Bek"/>
+                        <outlet property="breakerSlider" destination="ztj-G5-uBA" id="sSz-VO-gUN"/>
                         <outlet property="contactUsButton" destination="h3T-rq-6Yu" id="Gsj-YW-o1z"/>
+                        <outlet property="fbButton" destination="88C-Ln-k1n" id="4El-xh-2yr"/>
+                        <outlet property="featuredSliderButton" destination="KqM-Nc-RSD" id="Clm-IM-cmp"/>
                         <outlet property="greyBD" destination="Xav-Ae-Bo0" id="3ZH-aO-8E3"/>
+                        <outlet property="instaButton" destination="0fC-Bb-nij" id="mou-Pr-BMg"/>
+                        <outlet property="invisibleBackButton" destination="eYg-my-Mm4" id="1Lc-rh-cCF"/>
                         <outlet property="logOutButton" destination="auG-Ox-VO1" id="4Jg-AC-JmC"/>
                         <outlet property="menuButton" destination="ko1-xD-Tpt" id="Q3Z-rA-eaY"/>
+                        <outlet property="menuSlider" destination="exe-eI-YEK" id="hGI-0q-U5z"/>
+                        <outlet property="menuSliderView" destination="A8e-8Y-aKu" id="T6b-fJ-YoX"/>
+                        <outlet property="newsButton" destination="ptr-DU-xb7" id="ck8-GM-1hb"/>
+                        <outlet property="privacyPolicyButton" destination="aAh-ZH-5sM" id="PP3-mE-9ZA"/>
                         <outlet property="productsButton" destination="rkW-mY-5Pa" id="YZt-eH-zQf"/>
+                        <outlet property="productsSliderButton" destination="cN5-TF-Eef" id="w0z-KG-XJo"/>
+                        <outlet property="sliderStyLogo" destination="XSI-gU-Ta8" id="UV6-Cf-qeT"/>
                         <outlet property="stylizerLogo" destination="cKw-aQ-2aw" id="RGW-mQ-t2h"/>
                         <outlet property="subscriptionButton" destination="5GK-ka-kma" id="a8B-Uv-MyJ"/>
                         <outlet property="topBarMenu" destination="faG-8v-ryd" id="Pw1-Kv-IZU"/>
+                        <outlet property="websiteButton" destination="iHe-Rm-ybe" id="t1c-ee-w1k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vy-4M-f61" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -113,16 +203,28 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AboutUsButton" width="272" height="53"/>
         <image name="Affiliate Button" width="285" height="49"/>
         <image name="MenuButtonBLACK" width="37" height="34"/>
+        <image name="NewsButton" width="272" height="53"/>
         <image name="Stylizer logo" width="220" height="64"/>
+        <image name="affiliateProgramButton" width="272" height="53"/>
+        <image name="apparelButton" width="272" height="53"/>
         <image name="backdroplogin" width="375" height="667"/>
+        <image name="breakerSlider" width="272" height="3"/>
         <image name="contactUsButton" width="286" height="109"/>
+        <image name="facebookButtonLink" width="232" height="30"/>
+        <image name="featuredButtonSlider" width="272" height="53"/>
         <image name="greyedOutBD" width="375" height="600"/>
+        <image name="instagramButtonLink" width="242" height="33"/>
         <image name="logOutButton" width="375" height="49"/>
+        <image name="menuSlider" width="274" height="667"/>
+        <image name="privacyButton" width="272" height="53"/>
         <image name="productsButton" width="286" height="109"/>
+        <image name="productsButtonSlider" width="272" height="53"/>
         <image name="profileButtonBLACK" width="40" height="36"/>
         <image name="subscriptionButton" width="286" height="109"/>
         <image name="topBarMenu" width="375" height="69"/>
+        <image name="visitWebsite" width="237" height="32"/>
     </resources>
 </document>
