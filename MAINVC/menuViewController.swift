@@ -40,7 +40,7 @@ class menuViewController: UIViewController {
     @IBOutlet weak var subscriptionButton: UIButton!
     @IBOutlet weak var contactUsButton: UIButton!
     @IBOutlet weak var becomeAffiliateButton: UIButton!
-    @IBOutlet weak var logOutButton: UIButton!
+  
     
     func menuAnimations() {
         
@@ -71,9 +71,7 @@ class menuViewController: UIViewController {
         UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
             self.becomeAffiliateButton.alpha = 1
         })
-        UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
-            self.logOutButton.alpha = 1
-        })
+       
         print("Menu is animating!")
     }
     
@@ -90,6 +88,7 @@ class menuViewController: UIViewController {
     }
     
     @IBAction func accountButtonTapped(_ sender: Any) {
+        animateAccountScreen()
         print("Account Button Tapped, Display Information about account")
     }
     
@@ -111,11 +110,6 @@ class menuViewController: UIViewController {
         
     }
     
-    @IBAction func logOutButtonTapped(_ sender: Any) {
-        try! Auth.auth().signOut()
-        self.dismiss(animated: false, completion: nil)
-        
-    }
     
     //MARK: Slider Outlets / Actions
     
@@ -304,6 +298,106 @@ class menuViewController: UIViewController {
         
     }
     
+    //MARK: Account Outlets / Actions
+    
+//Outlets
+    
+    @IBOutlet weak var accountBD: UIImageView!
+    @IBOutlet weak var accountButtonWHITE: UIButton!
+    @IBOutlet weak var usernameBox: UIImageView!
+    @IBOutlet weak var changeButton: UIButton!
+    @IBOutlet weak var emailBox: UIImageView!
+    @IBOutlet weak var midBreaker: UIImageView!
+    @IBOutlet weak var ordersText: UIImageView!
+    @IBOutlet weak var bottomBreaker: UIImageView!
+    @IBOutlet weak var logOutButtonAC: UIButton!
+// Actions
+    @IBAction func changeButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func logOutButtonACTapped(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)
+        
+    }
+    
+    @IBAction func accountButtonWhiteTapped(_ sender: Any) {
+        // Animates the Account Screen
+        self.accountButtonWHITE.alpha = 0
+        self.accountButtonWHITE.isHidden = true
+        self.accountButton.alpha = 1
+        self.accountButton.isHidden = false
+        returnAccountScreen()
+        print("Account Screen is animating!")
+    }
+    
+    
+    func animateAccountScreen() {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.accountBD.alpha = 1
+        })
+        
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.accountButton.isHidden = true
+            self.accountButtonWHITE.alpha = 1
+            self.accountButtonWHITE.isHidden = false
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.usernameBox.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.changeButton.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.emailBox.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.midBreaker.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.ordersText.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.bottomBreaker.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.logOutButtonAC.alpha = 1
+        })
+    }
+    
+    func returnAccountScreen() {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.accountBD.alpha = 0
+        })
+        
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.accountButton.isHidden = false
+            self.accountButtonWHITE.alpha = 0
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.usernameBox.alpha = 0
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.changeButton.alpha = 0
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.emailBox.alpha = 0
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.midBreaker.alpha = 0
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.ordersText.alpha = 0
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.bottomBreaker.alpha = 0
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.logOutButtonAC.alpha = 0
+        })
+        
+        
+    }
     
     
 }

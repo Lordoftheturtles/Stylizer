@@ -82,14 +82,6 @@
                                     <action selector="becomeAffiliateButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="l03-Mk-05c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auG-Ox-VO1">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <state key="normal" image="logOutButton"/>
-                                <connections>
-                                    <action selector="logOutButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="E4I-VS-C4w"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A8e-8Y-aKu">
                                 <rect key="frame" x="-280" y="0.0" width="276" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -165,28 +157,83 @@
                                     <action selector="returnSlider:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="5Er-ee-xpK"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="accountBD" translatesAutoresizingMaskIntoConstraints="NO" id="Lpe-HI-zDd">
+                                <rect key="frame" x="-18" y="67" width="411" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="usernameTextField" translatesAutoresizingMaskIntoConstraints="NO" id="gAU-ey-IGk">
+                                <rect key="frame" x="10" y="84" width="351" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emailTextField" translatesAutoresizingMaskIntoConstraints="NO" id="2lN-dq-Ipx">
+                                <rect key="frame" x="11" y="199" width="351" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="midBreaker" translatesAutoresizingMaskIntoConstraints="NO" id="Rfl-bM-R5b">
+                                <rect key="frame" x="0.0" y="320" width="375" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buttonBreaker" translatesAutoresizingMaskIntoConstraints="NO" id="V2P-jK-aYb">
+                                <rect key="frame" x="0.0" y="599.5" width="375" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecs-22-RMh">
+                                <rect key="frame" x="12" y="607" width="351" height="54"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="logOut"/>
+                                <connections>
+                                    <action selector="logOutButtonACTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="O53-Qa-ra5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Orders" translatesAutoresizingMaskIntoConstraints="NO" id="ewb-m5-6wH">
+                                <rect key="frame" x="142" y="327" width="82" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iB-P5-sL1">
+                                <rect key="frame" x="155" y="162" width="65" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="Change button"/>
+                                <connections>
+                                    <action selector="changeButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="ZPI-XY-VVK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82j-qo-xnk">
+                                <rect key="frame" x="327" y="28" width="41" height="36"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="accountButtonTapped"/>
+                                <connections>
+                                    <action selector="accountButtonWhiteTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="ZUl-UD-9D4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dC4-H1-Piz"/>
                     </view>
                     <connections>
                         <outlet property="aboutUsSliderButton" destination="jwC-aw-URV" id="v1h-1t-KQw"/>
+                        <outlet property="accountBD" destination="Lpe-HI-zDd" id="aHT-3J-B7D"/>
                         <outlet property="accountButton" destination="UpF-Zg-yga" id="JmI-UC-wC7"/>
+                        <outlet property="accountButtonWHITE" destination="82j-qo-xnk" id="Iqf-aP-40f"/>
                         <outlet property="affiliateProgramSliderButton" destination="c9b-Fs-t7A" id="Mfx-nh-PQx"/>
                         <outlet property="apparelButton" destination="OOB-P9-wvF" id="Bfr-iK-YGM"/>
                         <outlet property="becomeAffiliateButton" destination="adf-Qw-H2d" id="9zc-7c-Bek"/>
+                        <outlet property="bottomBreaker" destination="V2P-jK-aYb" id="P5G-Fk-w7d"/>
                         <outlet property="breakerSlider" destination="ztj-G5-uBA" id="sSz-VO-gUN"/>
+                        <outlet property="changeButton" destination="5iB-P5-sL1" id="lNW-0m-Rpv"/>
                         <outlet property="contactUsButton" destination="h3T-rq-6Yu" id="Gsj-YW-o1z"/>
+                        <outlet property="emailBox" destination="2lN-dq-Ipx" id="Xsj-2h-b6v"/>
                         <outlet property="fbButton" destination="88C-Ln-k1n" id="4El-xh-2yr"/>
                         <outlet property="featuredSliderButton" destination="KqM-Nc-RSD" id="Clm-IM-cmp"/>
                         <outlet property="greyBD" destination="Xav-Ae-Bo0" id="3ZH-aO-8E3"/>
                         <outlet property="instaButton" destination="0fC-Bb-nij" id="mou-Pr-BMg"/>
                         <outlet property="invisibleBackButton" destination="eYg-my-Mm4" id="1Lc-rh-cCF"/>
-                        <outlet property="logOutButton" destination="auG-Ox-VO1" id="4Jg-AC-JmC"/>
+                        <outlet property="logOutButtonAC" destination="Ecs-22-RMh" id="Kqa-rR-173"/>
                         <outlet property="menuButton" destination="ko1-xD-Tpt" id="Q3Z-rA-eaY"/>
                         <outlet property="menuSlider" destination="exe-eI-YEK" id="hGI-0q-U5z"/>
                         <outlet property="menuSliderView" destination="A8e-8Y-aKu" id="T6b-fJ-YoX"/>
+                        <outlet property="midBreaker" destination="Rfl-bM-R5b" id="Fxz-wf-p6N"/>
                         <outlet property="newsButton" destination="ptr-DU-xb7" id="ck8-GM-1hb"/>
+                        <outlet property="ordersText" destination="ewb-m5-6wH" id="USI-GT-sfi"/>
                         <outlet property="privacyPolicyButton" destination="aAh-ZH-5sM" id="PP3-mE-9ZA"/>
                         <outlet property="productsButton" destination="rkW-mY-5Pa" id="YZt-eH-zQf"/>
                         <outlet property="productsSliderButton" destination="cN5-TF-Eef" id="w0z-KG-XJo"/>
@@ -194,6 +241,7 @@
                         <outlet property="stylizerLogo" destination="cKw-aQ-2aw" id="RGW-mQ-t2h"/>
                         <outlet property="subscriptionButton" destination="5GK-ka-kma" id="a8B-Uv-MyJ"/>
                         <outlet property="topBarMenu" destination="faG-8v-ryd" id="Pw1-Kv-IZU"/>
+                        <outlet property="usernameBox" destination="gAU-ey-IGk" id="ETF-Mm-NMM"/>
                         <outlet property="websiteButton" destination="iHe-Rm-ybe" id="t1c-ee-w1k"/>
                     </connections>
                 </viewController>
@@ -205,26 +253,34 @@
     <resources>
         <image name="AboutUsButton" width="272" height="53"/>
         <image name="Affiliate Button" width="285" height="49"/>
+        <image name="Change button" width="65" height="25"/>
         <image name="MenuButtonBLACK" width="37" height="34"/>
         <image name="NewsButton" width="272" height="53"/>
+        <image name="Orders" width="80" height="13"/>
         <image name="Stylizer logo" width="220" height="64"/>
+        <image name="accountBD" width="375" height="600"/>
+        <image name="accountButtonTapped" width="40" height="36"/>
         <image name="affiliateProgramButton" width="272" height="53"/>
         <image name="apparelButton" width="272" height="53"/>
         <image name="backdroplogin" width="375" height="667"/>
         <image name="breakerSlider" width="272" height="3"/>
+        <image name="buttonBreaker" width="375" height="1"/>
         <image name="contactUsButton" width="286" height="109"/>
+        <image name="emailTextField" width="351" height="73"/>
         <image name="facebookButtonLink" width="232" height="30"/>
         <image name="featuredButtonSlider" width="272" height="53"/>
         <image name="greyedOutBD" width="375" height="600"/>
         <image name="instagramButtonLink" width="242" height="33"/>
-        <image name="logOutButton" width="375" height="49"/>
+        <image name="logOut" width="353" height="56"/>
         <image name="menuSlider" width="274" height="667"/>
+        <image name="midBreaker" width="375" height="2"/>
         <image name="privacyButton" width="272" height="53"/>
         <image name="productsButton" width="286" height="109"/>
         <image name="productsButtonSlider" width="272" height="53"/>
         <image name="profileButtonBLACK" width="40" height="36"/>
         <image name="subscriptionButton" width="286" height="109"/>
         <image name="topBarMenu" width="375" height="69"/>
+        <image name="usernameTextField" width="351" height="71"/>
         <image name="visitWebsite" width="237" height="32"/>
     </resources>
 </document>
