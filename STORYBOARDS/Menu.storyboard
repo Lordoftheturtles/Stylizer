@@ -106,7 +106,7 @@
                                 <state key="normal" image="facebookButtonLink"/>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-Rm-ybe">
-                                <rect key="frame" x="-272" y="178" width="242" height="30"/>
+                                <rect key="frame" x="-275" y="178" width="242" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="visitWebsite"/>
                             </button>
@@ -157,6 +157,11 @@
                                     <action selector="returnSlider:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="5Er-ee-xpK"/>
                                 </connections>
                             </button>
+                            <view alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ec6-LF-y5B">
+                                <rect key="frame" x="-18" y="67" width="411" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="accountBD" translatesAutoresizingMaskIntoConstraints="NO" id="Lpe-HI-zDd">
                                 <rect key="frame" x="-18" y="67" width="411" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -205,6 +210,20 @@
                                     <action selector="accountButtonWhiteTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="ZUl-UD-9D4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whw-3c-EC5">
+                                <rect key="frame" x="45" y="113" width="286" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aru-sD-Lpq">
+                                <rect key="frame" x="40" y="230" width="286" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dC4-H1-Piz"/>
@@ -214,6 +233,7 @@
                         <outlet property="accountBD" destination="Lpe-HI-zDd" id="aHT-3J-B7D"/>
                         <outlet property="accountButton" destination="UpF-Zg-yga" id="JmI-UC-wC7"/>
                         <outlet property="accountButtonWHITE" destination="82j-qo-xnk" id="Iqf-aP-40f"/>
+                        <outlet property="accountView" destination="ec6-LF-y5B" id="gTh-Sd-7DW"/>
                         <outlet property="affiliateProgramSliderButton" destination="c9b-Fs-t7A" id="Mfx-nh-PQx"/>
                         <outlet property="apparelButton" destination="OOB-P9-wvF" id="Bfr-iK-YGM"/>
                         <outlet property="becomeAffiliateButton" destination="adf-Qw-H2d" id="9zc-7c-Bek"/>
@@ -241,6 +261,8 @@
                         <outlet property="stylizerLogo" destination="cKw-aQ-2aw" id="RGW-mQ-t2h"/>
                         <outlet property="subscriptionButton" destination="5GK-ka-kma" id="a8B-Uv-MyJ"/>
                         <outlet property="topBarMenu" destination="faG-8v-ryd" id="Pw1-Kv-IZU"/>
+                        <outlet property="userEmailLabel" destination="aru-sD-Lpq" id="6ru-2N-MRo"/>
+                        <outlet property="userNameLabel" destination="whw-3c-EC5" id="NXY-1u-kF4"/>
                         <outlet property="usernameBox" destination="gAU-ey-IGk" id="ETF-Mm-NMM"/>
                         <outlet property="websiteButton" destination="iHe-Rm-ybe" id="t1c-ee-w1k"/>
                     </connections>

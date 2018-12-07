@@ -90,6 +90,10 @@ class menuViewController: UIViewController {
     @IBAction func accountButtonTapped(_ sender: Any) {
         animateAccountScreen()
         print("Account Button Tapped, Display Information about account")
+        self.productsButton.isHidden = true
+        self.subscriptionButton.isHidden = true
+        self.contactUsButton.isHidden = true
+        self.becomeAffiliateButton.isHidden = true
     }
     
     @IBAction func productsButtonTapped(_ sender: Any) {
@@ -300,8 +304,14 @@ class menuViewController: UIViewController {
     
     //MARK: Account Outlets / Actions
     
-//Outlets
     
+//Outlets
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
+    
+    
+    
+    @IBOutlet weak var accountView: UIView!
     @IBOutlet weak var accountBD: UIImageView!
     @IBOutlet weak var accountButtonWHITE: UIButton!
     @IBOutlet weak var usernameBox: UIImageView!
@@ -323,16 +333,32 @@ class menuViewController: UIViewController {
     
     @IBAction func accountButtonWhiteTapped(_ sender: Any) {
         // Animates the Account Screen
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.accountView.alpha = 1
+        })
         self.accountButtonWHITE.alpha = 0
         self.accountButtonWHITE.isHidden = true
         self.accountButton.alpha = 1
         self.accountButton.isHidden = false
+        self.productsButton.isHidden = false
+        self.subscriptionButton.isHidden = false
+        self.contactUsButton.isHidden = false
+        self.becomeAffiliateButton.isHidden = false
+        self.menuButton.isHidden = false
         returnAccountScreen()
         print("Account Screen is animating!")
     }
     
     
     func animateAccountScreen() {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.userNameLabel.alpha = 1
+        })
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.userEmailLabel.alpha = 1
+        })
+        
+        self.menuButton.isHidden = true
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
             self.accountBD.alpha = 1
         })
@@ -366,6 +392,17 @@ class menuViewController: UIViewController {
     }
     
     func returnAccountScreen() {
+        
+        
+        self.accountView.isHidden = true
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.userNameLabel.alpha = 0
+        })
+        
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.userEmailLabel.alpha = 0
+        })
+        
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
             self.accountBD.alpha = 0
         })
