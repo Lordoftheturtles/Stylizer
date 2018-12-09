@@ -13,6 +13,7 @@ import FirebaseAuth
 import FBSDKLoginKit
 import FacebookLogin
 import Stripe
+import WebKit
 
 class menuViewController: UIViewController {
     
@@ -120,7 +121,7 @@ class menuViewController: UIViewController {
     }
     
     
-    //MARK: Slider Outlets / Actions
+    //MARK: SLIDER OUTLETS
     
     @IBOutlet weak var menuSlider: UIImageView!
     @IBOutlet weak var sliderStyLogo: UIImageView! // x -272 1
@@ -137,7 +138,53 @@ class menuViewController: UIViewController {
     @IBOutlet weak var privacyPolicyButton: UIButton! // 1.6
     @IBOutlet weak var menuSliderView: UIView!
     @IBOutlet weak var invisibleBackButton: UIButton!
-   
+    
+    //MARK: ACTIONS
+    
+    @IBAction func websiteButtonTapped(_ sender: Any) {
+        // Links to Website
+        
+        print("Sending User to Website!")
+    }
+    
+    @IBAction func featuredButtonTapped(_ sender: Any) {
+        //links to featured on website
+        
+        print("Sending User to Featured!")
+    }
+    
+    @IBAction func newsButtonTapped(_ sender: Any) {
+        print("Sending User to News!")
+        //Links to News
+    }
+    
+    @IBAction func productsSliderButtonTapped(_ sender: Any) {
+        // Handles Segue to Products
+        let storyboard = UIStoryboard(name: "Products", bundle: nil)
+        storyboard.instantiateInitialViewController()
+        self.performSegue(withIdentifier: "productsSegueSlider", sender: self)
+        print("Show Subscriptions Webpage")
+    }
+    @IBAction func apparelButtonTapped(_ sender: Any) {
+        print("Sending User to Apparel!")
+    }
+    
+    @IBAction func affiliateButtonTapped(_ sender: Any) {
+        print("Sending User to Afilliate Marketing Set-Up Web Page!")
+    }
+    
+    @IBAction func aboutUsButtonTapped(_ sender: Any) {
+    print("Sending User to About-Us page")
+    }
+    @IBAction func privacyPolicyButtonTapped(_ sender: Any) {
+        print("Sending user to Privacy Policy Agreement")
+    }
+    
+    
+    
+    
+    
+    
     @IBAction func returnSlider(_ sender: Any) {
         print("Return slider button Tapped!")
         // Returns the slider

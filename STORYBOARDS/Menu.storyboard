@@ -119,41 +119,66 @@
                                 <rect key="frame" x="-275" y="178" width="242" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="visitWebsite"/>
+                                <connections>
+                                    <action selector="websiteButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="ibE-Ai-dDv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqM-Nc-RSD">
                                 <rect key="frame" x="-272" y="211" width="272" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="featuredButtonSlider"/>
+                                <connections>
+                                    <action selector="featuredButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="KBp-6r-MuJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptr-DU-xb7">
                                 <rect key="frame" x="-272" y="264" width="272" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="NewsButton"/>
+                                <connections>
+                                    <action selector="newsButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="Xgh-Yo-eWx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN5-TF-Eef">
                                 <rect key="frame" x="-272" y="317" width="272" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="productsButtonSlider"/>
+                                <connections>
+                                    <action selector="productsSliderButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="0Jb-R4-Rsv"/>
+                                    <segue destination="AQV-Pw-D9h" kind="presentation" identifier="productsSegueSlider" id="PJZ-j4-kTq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOB-P9-wvF">
                                 <rect key="frame" x="-272" y="370" width="272" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="apparelButton"/>
+                                <connections>
+                                    <action selector="apparelButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="O2S-SH-KTM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9b-Fs-t7A">
                                 <rect key="frame" x="-272" y="423" width="272" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="affiliateProgramButton"/>
+                                <connections>
+                                    <action selector="affiliateButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="7RC-Jm-lTw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwC-aw-URV">
                                 <rect key="frame" x="-272" y="530" width="272" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="AboutUsButton"/>
+                                <connections>
+                                    <action selector="aboutUsButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="FOo-tb-0lf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAh-ZH-5sM">
                                 <rect key="frame" x="-272" y="583" width="272" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="privacyButton"/>
+                                <connections>
+                                    <action selector="privacyPolicyButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="bfZ-Ln-ZEI"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="breakerSlider" translatesAutoresizingMaskIntoConstraints="NO" id="ztj-G5-uBA">
                                 <rect key="frame" x="-272" y="484" width="272" height="40"/>
@@ -355,4 +380,7 @@
         <image name="usernameTextField" width="351" height="71"/>
         <image name="visitWebsite" width="237" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PJZ-j4-kTq"/>
+    </inferredMetricsTieBreakers>
 </document>
