@@ -148,6 +148,10 @@
                                     <action selector="returnToLoginButtonTapped:" destination="Lvz-TF-yRM" eventType="touchUpInside" id="vif-DZ-z3H"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="registeredMessage" translatesAutoresizingMaskIntoConstraints="NO" id="fxW-VG-x4S">
+                                <rect key="frame" x="-13" y="503" width="402" height="82"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dLF-Ti-0CM"/>
@@ -159,6 +163,7 @@
                         <outlet property="loginIcons" destination="RdR-U2-8F7" id="AI8-hB-90E"/>
                         <outlet property="passwordTextField" destination="AMk-je-vh1" id="KCa-uE-E2B"/>
                         <outlet property="registerButton" destination="QEE-zv-UWE" id="xc0-WA-GkA"/>
+                        <outlet property="registeredMessage" destination="fxW-VG-x4S" id="NEo-tV-O5Z"/>
                         <outlet property="stylizerLogo" destination="7ax-aP-jbp" id="xzL-id-4cw"/>
                     </connections>
                 </viewController>
@@ -257,5 +262,6 @@
         <image name="loginICONS" width="24" height="63"/>
         <image name="loginScreenBD" width="375" height="667"/>
         <image name="recoveryMessage" width="373" height="82"/>
+        <image name="registeredMessage" width="373" height="82"/>
     </resources>
 </document>

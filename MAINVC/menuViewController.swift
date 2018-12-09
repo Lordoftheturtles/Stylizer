@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Foundation
 import CoreData
 import Firebase
 import FirebaseAuth
@@ -19,7 +18,7 @@ class menuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        hideKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,11 +96,17 @@ class menuViewController: UIViewController {
     }
     
     @IBAction func productsButtonTapped(_ sender: Any) {
-        print("Product Button Tapped, link to Products page or display products")
+        let storyboard = UIStoryboard(name: "Products", bundle: nil)
+        storyboard.instantiateInitialViewController()
+        self.performSegue(withIdentifier: "productsSegue", sender: self)
+        print("Displaying Products in Products Storyboard!")
         
     }
     @IBAction func subscriptionButtonTapped(_ sender: Any) {
-        print("Show Subscriptions in a tab")
+        let storyboard = UIStoryboard(name: "Menu", bundle: nil)
+        storyboard.instantiateViewController(withIdentifier: "subscribeVC")
+        self.performSegue(withIdentifier: "subscribeSegue", sender: self)
+        print("Show Subscriptions Webpage")
         
     }
     
@@ -323,6 +328,7 @@ class menuViewController: UIViewController {
     @IBOutlet weak var logOutButtonAC: UIButton!
 // Actions
     @IBAction func changeButtonTapped(_ sender: Any) {
+        print("Changing your username!")
     }
     
     @IBAction func logOutButtonACTapped(_ sender: Any) {

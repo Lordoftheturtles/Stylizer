@@ -38,6 +38,8 @@ class registerViewController: UIViewController {
     @IBOutlet weak var backToLoginButton: UIButton! // 2
     @IBOutlet weak var emailAddressTextField: UITextField! // 1.4
     @IBOutlet weak var passwordTextField: UITextField! //1.4
+    @IBOutlet weak var registeredMessage: UIImageView!
+    
     
     
     
@@ -54,6 +56,8 @@ class registerViewController: UIViewController {
         }
         Auth.auth().createUser(withEmail: emailAddressTextField.text!, password: passwordTextField.text!) { (user, error) in
             if user != nil {
+                self.showRegisteredMessage()
+                
                 print("User has been created and logged in!")
             }
             if error == nil {
@@ -94,6 +98,16 @@ class registerViewController: UIViewController {
             self.passwordTextField.alpha = 1
         })
         print("Animating Register View Controller!")
+        
+    }
+    
+    func showRegisteredMessage() {
+        
+        UIView.animate(withDuration: 1, delay: 1.5, options: .curveEaseIn, animations: {
+            self.registeredMessage.alpha = 1
+            
+        })
+        
         
     }
     
