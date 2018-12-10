@@ -112,6 +112,8 @@ class menuViewController: UIViewController {
     }
     
     @IBAction func contactUsButtonTapped(_ sender: Any) {
+        
+        
         print("Go to Contact Us page")
         
     }
@@ -375,7 +377,36 @@ class menuViewController: UIViewController {
     @IBOutlet weak var logOutButtonAC: UIButton!
 // Actions
     @IBAction func changeButtonTapped(_ sender: Any) {
-        print("Changing your username!")
+        
+        //MARK: WORK IN PROGRESS
+        
+        // Add Alert Controller + Actions Handler
+//        let customAlertController = UIAlertController(title: "Change your Username!", message: nil, preferredStyle: .alert)
+//        let changeUserAction = UIAlertAction(title: "Change Username!", style: .default) {
+//            (_) in
+//            let userNameTextField = customAlertController.textFields![0] as
+//            UITextField
+//            let emailUserTextField = customAlertController.textFields![1] as
+//            UITextField
+//            // Do Something after change
+//        }
+//    changeUserAction.isEnabled = true
+//        customAlertController.addAction(changeUserAction)
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+//            // Do Something
+//        }
+//        customAlertController.addAction(cancelAction)
+//        // Add Text Fields
+//        customAlertController.addTextField { (textField) in
+//            textField.placeholder = "Username"
+//        }
+//        customAlertController.addTextField { (textField) in
+//            textField.placeholder = "Email Address"
+//        }
+//
+
+        
+                print("Changing your username!")
     }
     
     @IBAction func logOutButtonACTapped(_ sender: Any) {
