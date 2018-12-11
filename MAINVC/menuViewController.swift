@@ -104,20 +104,19 @@ class menuViewController: UIViewController {
         
     }
     @IBAction func subscriptionButtonTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Menu", bundle: nil)
-        storyboard.instantiateViewController(withIdentifier: "subscribeVC")
-        self.performSegue(withIdentifier: "subscribeSegue", sender: self)
+     // Work in progress
         print("Show Subscriptions Webpage")
         
     }
     
     @IBAction func contactUsButtonTapped(_ sender: Any) {
         
-        
+     
         print("Go to Contact Us page")
         
     }
     @IBAction func becomeAffiliateButtonTapped(_ sender: Any) {
+        
         print("Go to Affiliate Webpage / LINK")
         
     }
