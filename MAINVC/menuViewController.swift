@@ -17,6 +17,9 @@ import WebKit
 
 class menuViewController: UIViewController {
     
+    var user: [User] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
@@ -42,7 +45,11 @@ class menuViewController: UIViewController {
     @IBOutlet weak var becomeAffiliateButton: UIButton!
   
     //MARK: ALERT
+    
+    
     func showAlertButtonTapped() {
+       
+        
         
         let alertC = UIAlertController(title: "Change Username", message: "Start typing in the text box to and click confirm to change your username!", preferredStyle: .alert)
        
@@ -55,11 +62,14 @@ class menuViewController: UIViewController {
         
         let changeUserAction = UIAlertAction(title: "Change username!", style: .default) { (_) in
             let userNameTF = alertC.textFields?[0]
-            let _ = userNameTF?.text
+            var newText = userNameTF?.text
             UIView.animate(withDuration: 2, delay: 0, options: .curveEaseIn, animations: {
+
+                self.userNameLabel.text = newText
                 self.userNameLabel.alpha = 1
             })
         }
+            
         alertC.addAction(changeUserAction)
         alertC.addAction(cancelButton)
         self.present(alertC, animated: true, completion: nil)
@@ -68,13 +78,10 @@ class menuViewController: UIViewController {
         
         
     }
-    
- 
-    
-   
 
     
-    
+ 
+
     func menuAnimations() {
         
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
@@ -418,6 +425,8 @@ class menuViewController: UIViewController {
 //Outlets
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
+    
+    
     
     
     
