@@ -41,6 +41,39 @@ class menuViewController: UIViewController {
     @IBOutlet weak var contactUsButton: UIButton!
     @IBOutlet weak var becomeAffiliateButton: UIButton!
   
+    //MARK: ALERT
+    func showAlertButtonTapped() {
+        
+        let alertC = UIAlertController(title: "Change Username", message: "Start typing in the text box to and click confirm to change your username!", preferredStyle: .alert)
+       
+        alertC.addTextField { (textField) in
+            textField.placeholder = "Username"
+        }
+        
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+        }
+        
+        let changeUserAction = UIAlertAction(title: "Change username!", style: .default) { (_) in
+            let userNameTF = alertC.textFields?[0]
+            let _ = userNameTF?.text
+            UIView.animate(withDuration: 2, delay: 0, options: .curveEaseIn, animations: {
+                self.userNameLabel.alpha = 1
+            })
+        }
+        alertC.addAction(changeUserAction)
+        alertC.addAction(cancelButton)
+        self.present(alertC, animated: true, completion: nil)
+        print("Showing Alert")
+        
+        
+        
+    }
+    
+ 
+    
+   
+
+    
     
     func menuAnimations() {
         
@@ -175,9 +208,14 @@ class menuViewController: UIViewController {
     }
     
     @IBAction func aboutUsButtonTapped(_ sender: Any) {
+        //MARK: WIP
+        // Opens up slider bar further to fill the screen, animates
+        // the buttons out of the screen and fills screen with information - Design information About Us Page
     print("Sending User to About-Us page")
     }
     @IBAction func privacyPolicyButtonTapped(_ sender: Any) {
+        // Opens up our privacy policy agreement
+        // Write up a privacy policy agreement
         print("Sending user to Privacy Policy Agreement")
     }
     
@@ -378,35 +416,13 @@ class menuViewController: UIViewController {
     @IBAction func changeButtonTapped(_ sender: Any) {
         
         //MARK: WORK IN PROGRESS
+       showAlertButtonTapped()
         
-        // Add Alert Controller + Actions Handler
-//        let customAlertController = UIAlertController(title: "Change your Username!", message: nil, preferredStyle: .alert)
-//        let changeUserAction = UIAlertAction(title: "Change Username!", style: .default) {
-//            (_) in
-//            let userNameTextField = customAlertController.textFields![0] as
-//            UITextField
-//            let emailUserTextField = customAlertController.textFields![1] as
-//            UITextField
-//            // Do Something after change
-//        }
-//    changeUserAction.isEnabled = true
-//        customAlertController.addAction(changeUserAction)
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
-//            // Do Something
-//        }
-//        customAlertController.addAction(cancelAction)
-//        // Add Text Fields
-//        customAlertController.addTextField { (textField) in
-//            textField.placeholder = "Username"
-//        }
-//        customAlertController.addTextField { (textField) in
-//            textField.placeholder = "Email Address"
-//        }
-//
+           print("Changing your username!")
+        }
+    
+    
 
-        
-                print("Changing your username!")
-    }
     
     @IBAction func logOutButtonACTapped(_ sender: Any) {
         try! Auth.auth().signOut()
