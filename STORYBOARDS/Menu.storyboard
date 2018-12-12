@@ -18,6 +18,14 @@
             </objects>
             <point key="canvasLocation" x="-229" y="-55"/>
         </scene>
+        <!--socialMedia-->
+        <scene sceneID="RoM-D7-fml">
+            <objects>
+                <viewControllerPlaceholder storyboardName="socialMedia" id="xCA-lo-RDu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJt-Wa-9dR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="-745"/>
+        </scene>
         <!--MenuVC-->
         <scene sceneID="kGr-FV-Dct">
             <objects>
@@ -105,11 +113,17 @@
                                 <rect key="frame" x="-272" y="88" width="243" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="instagramButtonLink"/>
+                                <connections>
+                                    <action selector="instagramButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="MBB-aF-siL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88C-Ln-k1n">
                                 <rect key="frame" x="-272" y="137" width="232" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="facebookButtonLink"/>
+                                <connections>
+                                    <action selector="facebookButtonTapped:" destination="Bgd-1T-0zB" eventType="touchUpInside" id="Zax-db-w0Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-Rm-ybe">
                                 <rect key="frame" x="-275" y="178" width="242" height="30"/>
@@ -296,11 +310,53 @@
                         <outlet property="userNameLabel" destination="whw-3c-EC5" id="NXY-1u-kF4"/>
                         <outlet property="usernameBox" destination="gAU-ey-IGk" id="ETF-Mm-NMM"/>
                         <outlet property="websiteButton" destination="iHe-Rm-ybe" id="t1c-ee-w1k"/>
+                        <segue destination="SoM-7f-utr" kind="presentation" identifier="websiteSegue" id="1xb-6C-Esp"/>
+                        <segue destination="xCA-lo-RDu" kind="presentation" identifier="facebookSegue" id="yiF-fy-wfq"/>
+                        <segue destination="xCA-lo-RDu" kind="presentation" identifier="instagramSegue" id="76p-ra-lQo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vy-4M-f61" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="236" y="-238.83058470764618"/>
+        </scene>
+        <!--Website View Controller-->
+        <scene sceneID="8zY-1b-SnJ">
+            <objects>
+                <viewController storyboardIdentifier="websiteVC" title="Website View Controller" id="SoM-7f-utr" customClass="websiteViewController" customModule="Stylizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DPU-NG-RnY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cst-CX-Mjs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xm7-jK-LVc">
+                                <rect key="frame" x="0.0" y="642" width="375" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="returnWebView"/>
+                                <connections>
+                                    <action selector="returnButtonTapped:" destination="SoM-7f-utr" eventType="touchUpInside" id="Fhz-PS-cjI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vj1-rK-na8"/>
+                    </view>
+                    <connections>
+                        <outlet property="returnButton" destination="Xm7-jK-LVc" id="Vok-NS-HX3"/>
+                        <outlet property="webView" destination="cst-CX-Mjs" id="jzM-ak-yx4"/>
+                        <segue destination="Bgd-1T-0zB" kind="presentation" identifier="returnSegue2" id="lu7-Ah-0g0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stE-Ty-QO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034.4000000000001" y="-354.87256371814095"/>
         </scene>
     </scenes>
     <resources>
@@ -331,12 +387,14 @@
         <image name="productsButton" width="286" height="109"/>
         <image name="productsButtonSlider" width="272" height="53"/>
         <image name="profileButtonBLACK" width="40" height="36"/>
+        <image name="returnWebView" width="375" height="25"/>
         <image name="subscriptionButton" width="286" height="109"/>
         <image name="topBarMenu" width="375" height="69"/>
         <image name="usernameTextField" width="351" height="71"/>
         <image name="visitWebsite" width="237" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="yiF-fy-wfq"/>
         <segue reference="PJZ-j4-kTq"/>
     </inferredMetricsTieBreakers>
 </document>

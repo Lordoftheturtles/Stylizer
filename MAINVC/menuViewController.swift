@@ -175,15 +175,34 @@ class menuViewController: UIViewController {
     
     //MARK: ACTIONS
     
+    @IBAction func instagramButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "socialMedia", bundle: nil)
+        storyboard.instantiateInitialViewController()
+        self.performSegue(withIdentifier: "instagramSegue", sender: self)
+        print("Presenting Instagram View Controller!")
+        
+    }
+    
+    @IBAction func facebookButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "socialMedia", bundle: nil)
+        storyboard.instantiateInitialViewController()
+        self.performSegue(withIdentifier: "facebookSegue", sender: self)
+        print("Presenting Facebook View Controller!")
+    }
+    
+    
     @IBAction func websiteButtonTapped(_ sender: Any) {
         // Links to Website
+        let _ = UIStoryboard(name: "Menu", bundle: nil)
+        self.performSegue(withIdentifier: "websiteSegue", sender: self)
         
         print("Sending User to Website!")
     }
     
     @IBAction func featuredButtonTapped(_ sender: Any) {
         //links to featured on website
-        
+        let _ = UIStoryboard(name: "Menu", bundle: nil)
+        self.performSegue(withIdentifier: "websiteSegue", sender: self)
         print("Sending User to Featured!")
     }
     
@@ -414,7 +433,6 @@ class menuViewController: UIViewController {
     @IBOutlet weak var logOutButtonAC: UIButton!
 // Actions
     @IBAction func changeButtonTapped(_ sender: Any) {
-        
         //MARK: WORK IN PROGRESS
        showAlertButtonTapped()
         

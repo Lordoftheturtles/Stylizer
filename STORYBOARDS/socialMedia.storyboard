@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bkD-kh-lzE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Social Media View Controller-->
+        <scene sceneID="u6D-K6-453">
+            <objects>
+                <viewController storyboardIdentifier="facebookVC" title="Social Media View Controller" id="bkD-kh-lzE" customClass="socialMediaViewController" customModule="Stylizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nca-Gc-BSg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="accountBD" translatesAutoresizingMaskIntoConstraints="NO" id="ta7-H0-KOh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <wkWebView alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZPP-tI-rgv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <wkWebView alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="793-ot-OFK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nF-U7-vA4">
+                                <rect key="frame" x="66" y="207" width="242" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="instagramButtonLink"/>
+                                <connections>
+                                    <action selector="instagramButtonTapped:" destination="bkD-kh-lzE" eventType="touchUpInside" id="urO-hw-e7D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUs-gh-1KG">
+                                <rect key="frame" x="71" y="298" width="232" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="facebookButtonLink"/>
+                                <connections>
+                                    <action selector="facebookButtonTapped:" destination="bkD-kh-lzE" eventType="touchUpInside" id="YOl-DA-4z0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hk-Yt-GaH">
+                                <rect key="frame" x="0.0" y="642" width="375" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="returnWebView"/>
+                                <connections>
+                                    <action selector="returnButtonTapped:" destination="bkD-kh-lzE" eventType="touchUpInside" id="VE4-wf-tPH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOp-9B-Y0S">
+                                <rect key="frame" x="0.0" y="692" width="375" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="returnWebView"/>
+                                <connections>
+                                    <action selector="returnSocialMediaView:" destination="bkD-kh-lzE" eventType="touchUpInside" id="hnm-Wp-hGm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pop-sW-qPM"/>
+                    </view>
+                    <connections>
+                        <outlet property="facebookButton" destination="pUs-gh-1KG" id="eu6-dD-xPm"/>
+                        <outlet property="instagramButton" destination="4nF-U7-vA4" id="J70-4U-3Mp"/>
+                        <outlet property="returnButton" destination="3Hk-Yt-GaH" id="cVW-mM-XYK"/>
+                        <outlet property="returnButton2" destination="gOp-9B-Y0S" id="JEa-2t-IV0"/>
+                        <outlet property="socialMediaBD" destination="ta7-H0-KOh" id="q1L-a3-DUh"/>
+                        <outlet property="webView" destination="ZPP-tI-rgv" id="VnM-9o-Aft"/>
+                        <outlet property="webView2" destination="793-ot-OFK" id="W98-ln-xYB"/>
+                        <segue destination="kbT-PA-Ecn" kind="presentation" identifier="backToMenu" id="USf-z6-Qwp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ny-JK-ttk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="86.806596701649184"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="84O-9d-Vtq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" id="kbT-PA-Ecn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zpg-k6-UML" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="-334"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="accountBD" width="375" height="600"/>
+        <image name="facebookButtonLink" width="232" height="30"/>
+        <image name="instagramButtonLink" width="242" height="33"/>
+        <image name="returnWebView" width="375" height="25"/>
+    </resources>
+</document>
